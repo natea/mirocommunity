@@ -22,14 +22,13 @@
 {% block side %}
 	<div class="padded">
 		{% if author.get_profile.logo %}
-			{% adjust author.get_profile.logo.name "fit" width=200 height=400 as profile_image %}
+			{% adjust author.get_profile.logo.name adjustment="fit" width=200 height=400 as profile_image %}
 			<a href="{{ author.get_profile.logo.url }}"><img src="{{ profile_image }}" height="{{ profile_image.height }}" width="{{ profile_image.width }}" /></a>
 		{% endif %}
 		<ul class="author-detail-list">
 			{% if author.get_profile.location %}<li class="author-location">{{ author.get_profile.location }}</li>{% endif %}
 			{% if author.get_profile.website %}<li class="author-website"><a href="{{ author.get_profile.website }}">Website</a></li>{% endif %}
 		</ul>
-		<div>{{ author.get_profile.description|sanitize }}</div>
 	
 		{% get_author_comment_count for author as comment_count %}
 	
@@ -69,6 +68,14 @@
 
 {% block main %}
 	<div class="padded">
+		{% if author.first_name %}
+		<h1>{{ author.get_full_name }}</h1>
+		{% endif %}
+
+		<div>{{ author.get_profile.description|sanitize }}</div>
+
+		<hr />
+		
 		{% if page_obj.has_other_pages %}
 			<div class="pagination upper">
 				{% pagetabs page_obj %}

@@ -14,7 +14,7 @@
 		<div class="pod-content">
 			{% if site_settings.logo %}
 				<figure class="figure-left">
-					<img class="logo" alt="{{ site_settings.site.name }} Logo" src="{% adjust site_settings.logo.name 'fit' width=480 height=160 %}" />
+					<img class="logo" alt="{{ site_settings.site.name }} Logo" src="{% adjust site_settings.logo.name width=480 height=160 adjustment="fit" %}" />
 				</figure>
 			{% endif %}
 			{% autoescape off %}
@@ -27,20 +27,22 @@
 {% block side %}
 	<div class="pod">
 		<header class="pod-header">
-			<h1 class="pod-title">{% trans "Powered by Miro Community" %}</h1>
+			<h1 class="pod-title">{% trans "Our Mission" %}</h1>
 		</header>
 		<div class="pod-content">
-			<figure class="figure-left">
-				<img class="logo" alt="Miro Community logo" src="http://s3.mirocommunity.org.s3.amazonaws.com/static/mirocommunity_site/images/logo.png" width="422" height="65"/>
-			</figure>
+
 			<p>
 				{% blocktrans %}
-					<a href="http://www.mirocommunity.org">Miro Community</a> is an easy open source video curation platform. Anyone can quickly embed, organize and display videos from around the internet. <a href="http://mirocommunity.org/pricing/">Get started now</a>&#8212;it&#8217;s free and takes less than a minute.
-				{% endblocktrans %}
-			</p>
-			<p>
-				{% blocktrans %}
-					Miro Community is developed by the <a href="http://pculture.org">Participatory Culture Foundation</a>.
+<p><strong>THE INTENTION AND PURPOSE OF SMALLSLIVE IS DEDICATED TO THE BETTERMENT OF MANKIND THROUGH THE DISSEMINATION OF THIS MUSIC WORLD WIDE.</strong></p>
+<p>
+OUR HOPE IS THAT THE MUSIC ON THIS SITE WILL BE STUDIED AND ENJOYED BY PEOPLE OF OPEN MINDS AND POSITIVE CLEAR THOUGHTS.  PLEASE RESEARCH THESE ARTISTS.  IF YOU ENJOY THEIR MUSIC, PLEASE SUPPORT THEM BY PURCHASING THEIR MUSIC OR CONTACTING THEM WITH YOUR POSITIVE FEEDBACK. WE DEDICATE THIS WEBSITE AS RESOURCE FOR MUSICIANS AND FANS TO DISCOVER EACH OTHER’S WORKS, TO SHARE IDEAS AND FURTHER THE DEVELOPMENT OF THIS MUSIC.  ONLY THROUGH PEACEFUL INTERCHANGE OF IDEAS WILL WE BE ABLE TO PROGRESS AS ARTISTS AND HUMAN BEINGS.
+</p>
+<p>
+OUR INTENTION IS ALSO TO SUPPORT SMALLS JAZZ CLUB AND THE MUSICIANS THAT PERFORM THERE.  BY SUPPORTING THIS SITE, YOU ARE DIRECTLY SUPPORTING THE CLUB AND ITS ARTISTS.  WE HOPE THAT IF YOU ARE ABLE TO, THAT YOU COME VISIT US IN NEW YORK CITY AND EXPERIENCE THE CLUB IN PERSON.  WE ASK THAT YOU NOT STEAL FROM THIS SITE AND THAT YOU TREAT THE MATERIAL HERE RESPECTFULLY.
+</p>
+<p>
+<strong>WE ARE DEDICATED TO WORLD PEACE THROUGH MUSIC.</strong>
+</p>
 				{% endblocktrans %}
 			</p>
 		</div>
